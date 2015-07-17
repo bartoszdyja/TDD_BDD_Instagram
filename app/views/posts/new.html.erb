@@ -1,5 +1,10 @@
-<h1>Create new post</h1>
+<h1 class="center-align">Create new post</h1>
 <%= form_for @post, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :title, html: {class: "validate"}%>
+	<% if @post.errors.any? %>
+		<% @post.errors.full_messages.each do |msg| %>
+	    <li><%= msg %></li>
+	  <% end %>
+	<% end %>
+  <%= f.text_field :title, class: "validate"%>
   <%= f.submit "Create" %>
 <% end %>

@@ -1,6 +1,7 @@
 <div class="center-align">
-<h2>Posts</h2>
-<%= link_to '<i class="material-icons">add</i>'.html_safe, new_post_path, class: 'btn-floating btn-large waves-effect waves-light red' %> 
+<% if user_signed_in? %>
+	<p><%= link_to '<i class="material-icons">add</i>'.html_safe, new_post_path, class: 'btn-floating btn-large waves-effect waves-light red' %> </p>
+<% end %>
 </div>
 
 <div class="row">
@@ -11,7 +12,8 @@
           <img src='images/sample.jpg'>
         </div>
         <div class="card-content">
-          <p><%= p.title %></p>
+          <p><%=link_to p.title, p %></p>
+
         </div>
       </div>
     </div>

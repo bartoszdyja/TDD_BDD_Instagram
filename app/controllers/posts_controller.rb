@@ -6,8 +6,11 @@ class PostsController < ApplicationController
 
   def create
   	@post = Post.new(posts_params)
-  	@post.save
-  	redirect_to root_path, notice: 'Post has been created'
+  	if @post.save
+  		redirect_to root_path, notice: 'Post has been created'
+  	else
+  		render 'new'
+  	end
   end
 
   def index
