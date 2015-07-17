@@ -1,5 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="center-align">
+<h2>Posts</h2>
+<%= link_to '<i class="material-icons">add</i>'.html_safe, new_post_path, class: 'btn-floating btn-large waves-effect waves-light red' %> 
+</div>
 
-  <a class="btn" onclick="Materialize.toast('I am a toast', 4000,'')">Toast!</a>
+<div class="row">
+	<% @posts.each do |p| %>
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-image">
+          <img src='images/sample.jpg'>
+        </div>
+        <div class="card-content">
+          <p><%= p.title %></p>
+        </div>
+      </div>
+    </div>
+	<% end %>
+</div>
+
 
