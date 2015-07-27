@@ -56,5 +56,8 @@ group :development, :test do
 
   #Factory Girl
   gem 'factory_girl_rails'
+
+  #Simple Cov
+  gem 'simplecov'
 end
 
