@@ -11,11 +11,14 @@ feature 'Creating posts' do
     expect(page).to have_content('Logout')
     expect(page).to_not have_content('Sign in')
     click_link 'add'
-    fill_in 'post_title', with: 'test picture' 
+    fill_in 'post_title', with: 'test picture'
+    description = 'test_description' 
+    fill_in 'post_description', with: description
     attach_file('post_picture', "app/assets/images/sample.jpg")
     click_button 'Submit'
     expect(page).to have_content('Post has been created')
-    save_and_open_page
+    expect(page).to have_content(user.email)
+    expect(page).to have_content(description)
   end
 
   scenario 'not logged in users cannot add posts' do
@@ -23,8 +26,9 @@ feature 'Creating posts' do
   	expect(page).to_not have_content('add')
   	expect(page).to have_content('Sign in')
   	expect(page).to have_content('Sign up')
+  	visit('posts/new')
+  	expect(page).to have_content('You need to sign in or sign up before continuing.')
   end
-
 
 
 end
