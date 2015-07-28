@@ -50,7 +50,10 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:post_id])
     @post.liked_by current_user
-    redirect_to :back
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js { render layout: false }
+    end
   end
 
   private

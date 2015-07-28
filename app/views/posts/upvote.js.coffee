@@ -1,0 +1,1 @@
+ $("#post-<%=@post.id%>").html("<%= @post.votes_for.size %>");

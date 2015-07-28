@@ -21,10 +21,11 @@
     });
     $(".button-collapse").sideNav();
   	setTimeout(function() {
-    $('#flash').slideUp();
+      $('#flash').slideUp();
   	}, 3000);
   	$('.materialboxed').materialbox();
       
   });
+
 
         
