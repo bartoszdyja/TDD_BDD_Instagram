@@ -47,6 +47,12 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def upvote
+    @post = Post.find(params[:post_id])
+    @post.liked_by current_user
+    redirect_to :back
+  end
+
   private
 
   def set_post

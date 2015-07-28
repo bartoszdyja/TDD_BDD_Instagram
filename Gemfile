@@ -38,6 +38,8 @@ gem "paperclip", "~> 4.3"
 #Devise
 gem "devise"
 
+#Acts as votable
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 group :development, :test do

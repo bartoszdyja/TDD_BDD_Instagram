@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  resources :posts
+  resources :posts do
+    put 'upvote' => 'posts#upvote'
+  end
+
   root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

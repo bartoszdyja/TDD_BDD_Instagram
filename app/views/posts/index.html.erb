@@ -14,13 +14,16 @@
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4"><%= p.title %><i class="material-icons right">more_vert</i></span>
-      <p><%= p.user.email %></p>
-      <%= link_to 'Visit', p %>
+      <p>
+        <%=p.votes_for.size %>
+        <%=link_to 'Like', post_upvote_path(p), method: :put %></p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4"><%= p.title %><i class="material-icons right">close</i></span>
       <p><%= p.description %></p>
-      <%= link_to 'Visit', p %>
+      <p>Email: <%= p.user.email %></p>
+      <p>Added by:<%= p.author %></p>
+      <p> <%= link_to 'Visit', p %></p>
     </div>
   </div>
             
