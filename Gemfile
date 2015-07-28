@@ -38,7 +38,6 @@ gem "paperclip", "~> 4.3"
 #Devise
 gem "devise"
 
-gem 'coveralls', require: false
 
 
 group :development, :test do
@@ -62,5 +61,7 @@ group :development, :test do
 
   #Simple Cov
   gem 'simplecov'
+  
+
 end
 
