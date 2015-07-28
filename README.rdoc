@@ -1,3 +1,11 @@
+[![Coverage Status](https://coveralls.io/repos/railsbeginner/TDD_BDD_Instagram/badge.svg?branch=master&service=github)](https://coveralls.io/github/railsbeginner/TDD_BDD_Instagram?branch=master)
+Textile
+!https://coveralls.io/repos/railsbeginner/TDD_BDD_Instagram/badge.svg?branch=master&service=github(Coverage Status)!:https://coveralls.io/github/railsbeginner/TDD_BDD_Instagram?branch=master
+RDoc
+{<img src="https://coveralls.io/repos/railsbeginner/TDD_BDD_Instagram/badge.svg?branch=master&service=github" alt="Coverage Status" />}[https://coveralls.io/github/railsbeginner/TDD_BDD_Instagram?branch=master]
+HTML
+<a href='https://coveralls.io/github/railsbeginner/TDD_BDD_Instagram?branch=master'><img src='https://coveralls.io/repos/railsbeginner/TDD_BDD_Instagram/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+Rst 
 == README
 
 This README would normally document whatever steps are necessary to get the
