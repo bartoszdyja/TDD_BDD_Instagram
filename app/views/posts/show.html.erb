@@ -1,2 +1,12 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container center-align">
+	<h1><%=@post.title%></h1>
+	<%=image_tag @post.picture %>
+	<p><%= @post.description%></p>
+	<p>Added by <%=@post.author %></p>
+	<p>Added on <%=@post.added_on %></p>
+	<% if current_user==@post.user %>
+		<%= link_to 'Destroy', @post, method: :delete, data: { confirm: "You sure?" } %>
+		<%= link_to 'Edit', edit_post_path %>
+	<% end %>
+</div>
+                      
