@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-feature 'Edit posts' do  
+feature 'Destroy posts' do  
   scenario 'owner can edit post' do
   	user = FactoryGirl.create(:user)
     visit('users/sign_in')
@@ -19,21 +19,14 @@ feature 'Edit posts' do
     end
     expect(page).to have_content('Edit')
     expect(page).to have_content('Destroy')
-    click_link('Edit')
-    fill_in 'post_title', with: 'updated post_title'
-    expect(page).to have_field('post_title', with: 'updated post_title')
-    click_button 'Submit'
-    expect(page).to have_content('updated post_title')
-    click_link('Edit')
-    fill_in 'post_title', with: ''
-    expect(page).to have_field('post_title', with: '')
-    click_button 'Submit'
-    expect(page).to have_content("Title can't be blank")
+    click_link('Destroy')
+    expect(page).to have_content('deleted')
+
   end
 
 
 
-  scenario 'not logged in users cannot edit posts' do
+  scenario 'not logged in users cannot destroy posts' do
     user = FactoryGirl.create(:user)
     post = FactoryGirl.create(:post)
     visit('/')

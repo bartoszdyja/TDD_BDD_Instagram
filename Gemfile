@@ -63,6 +63,8 @@ group :development, :test do
 
   #Simple Cov
   gem 'simplecov'
+
+  gem 'database_cleaner'
   
 
 end

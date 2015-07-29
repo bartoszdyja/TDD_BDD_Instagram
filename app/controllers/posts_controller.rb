@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.save
+    if @post.update(posts_params)
       redirect_to @post, notice: 'Post was successfully updated'
     else
       render :edit
